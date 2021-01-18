@@ -1,7 +1,8 @@
 body {
 	background-color: #fff;
 	font-size: 16px;
-	line-height: 24px;
+  line-height: 24px;
+  @extend %rubik-400;
 }
 
 .container {

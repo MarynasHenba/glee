@@ -9,6 +9,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@extend %rubik-500;
 	}
 }
 
@@ -73,6 +74,7 @@
 		line-height: 15px;
 		color: $default;
 		text-align: center;
+		@extend %dmsans-400;
 	}
 }
 
