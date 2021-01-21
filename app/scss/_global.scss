@@ -39,7 +39,8 @@ body {
 }
 
 .filters {
-	text-align: center;
+  text-align: center;
+  margin-bottom: 75px;
 	&__btn {
     border: none;
     padding: 0;
@@ -51,7 +52,10 @@ body {
 		cursor: pointer;
 		&:hover {
 			color: $title-dark;
-		}
+    }
+    &__btn--active {
+      color: $title-dark;
+    }
 	}
 	&__btn + .filters__btn {
 		margin-left: 25px;

@@ -36,11 +36,11 @@ $button: #a3bbc8;
 	font-weight: 500;
 }
 
-// %btn {
-// 	background-color: $button;
-// 	font-size: 14px;
-// 	line-height: 21px;
-// 	color: #fff;
-// }
+@function max($numbers...) {
+	@return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+	@return m#{i}n(#{$numbers});
+}
 
 

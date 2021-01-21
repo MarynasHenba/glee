@@ -163,6 +163,7 @@
 }
 
 .info {
+	margin-bottom: 75px;
 	&__content {
 		display: flex;
 		align-items: center;
@@ -200,15 +201,12 @@
 }
 
 .products {
-	padding: 75px 0 50px 0;
+	padding-bottom: 95px;
 	// &__title {
 	// 	margin-bottom: 25px;
 	// }
 	&-top {
 		margin-bottom: 75px;
-		&__filters {
-			margin-bottom: 75px;
-		}
 		&__content {
 			display: grid;
 			grid-template-columns: repeat(4, 270px);
@@ -324,6 +322,53 @@
 			&::after {
 				background-image: url("../images/icons/btn-arrow-blue.svg");
 			}
+		}
+	}
+}
+
+.design {
+	// padding-bottom: 120px;
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(3, 370px);
+		grid-template-rows: repeat(2, 246px);
+		row-gap: 35px;
+		column-gap: 30px;
+	}
+	&__item {
+		position: relative;
+		transition: all 0.5s;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+	&__item-inner {
+		max-width: 170px;
+		position: absolute;
+		@extend %dmsans-700;
+		top: 40px;
+		left: 35px;
+	}
+	&__item-title {
+		font-size: 20px;
+		line-height: 26px;
+		color: $title-dark;
+		margin-bottom: 15px;
+	}
+	&__item-subtitle {
+		font-size: 16px;
+		color: $button;
+	}
+	&-video {
+		padding: 120px 0;
+		&__wrapper {
+			position: relative;
+		}
+		&__link {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 	}
 }
