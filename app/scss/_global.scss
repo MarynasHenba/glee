@@ -1,19 +1,19 @@
 html,
 body {
-  height: 100%;
+	height: 100%;
 }
 
 body {
 	background-color: #fff;
 	font-size: 16px;
-  line-height: 24px;
-  @extend %rubik-400;
-  display: flex;
-  flex-direction: column;
+	line-height: 24px;
+	@extend %rubik-400;
+	display: flex;
+	flex-direction: column;
 }
 
 .main {
-  flex-grow: 1;
+	flex-grow: 1;
 }
 
 .container--large {
@@ -23,8 +23,58 @@ body {
 }
 
 .container--small {
-  display: block !important;
-  max-width: 1200px;
+	display: block !important;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
+
+.title {
+	font-size: 36px;
+	line-height: 48px;
+	color: $title-dark;
+  @extend %dmsans-700;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.filters {
+	text-align: center;
+	&__btn {
+    border: none;
+    padding: 0;
+		background-color: transparent;
+		font-size: 16px;
+		line-height: 24px;
+		color: #8b8b8b;
+		@extend %dmsans-700;
+		cursor: pointer;
+		&:hover {
+			color: $title-dark;
+		}
+	}
+	&__btn + .filters__btn {
+		margin-left: 25px;
+	}
+	&__btn--active {
+		color: $title-dark;
+	}
+}
+
+.button {
+  display: block;
+  position: relative;
+		&::after {
+			content: "";
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 22px;
+			height: 9px;
+			position: absolute;
+			top: 50%;
+			right: 20px;
+      transform: translateY(-50%);
+    }
+}
+
+    
