@@ -163,7 +163,6 @@
 }
 
 .info {
-	margin-bottom: 75px;
 	&__content {
 		display: flex;
 		align-items: center;
@@ -201,10 +200,7 @@
 }
 
 .products {
-	padding-bottom: 95px;
-	// &__title {
-	// 	margin-bottom: 25px;
-	// }
+	padding-top: 75px;
 	&-top {
 		margin-bottom: 75px;
 		&__content {
@@ -327,7 +323,7 @@
 }
 
 .design {
-	// padding-bottom: 120px;
+	padding-top: 95px;
 	&__content {
 		display: grid;
 		grid-template-columns: repeat(3, 370px);
