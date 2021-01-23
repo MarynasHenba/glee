@@ -192,17 +192,43 @@
 						<h2 class="title products__title">Products of the week</h2>
 						<div class="filters">
 							<button
-								class="filters__btn filters__btn--active products-top__btn"
+								class="filters__btn products-top__btn filter-1"
+								type="button"
+								data-filter="all"
 							>
 								All
 							</button>
-							<button class="filters__btn products-top__btn">Furnitures</button>
-							<button class="filters__btn products-top__btn">Chairs</button>
-							<button class="filters__btn products-top__btn">Lighting</button>
-							<button class="filters__btn products-top__btn">Decor</button>
+							<button
+								class="filters__btn products-top__btn filter-1"
+								type="button"
+								data-filter=".category-f1"
+							>
+								Furnitures
+							</button>
+							<button
+								class="filters__btn products-top__btn filter-1"
+								type="button"
+								data-filter=".category-ch1"
+							>
+								Chairs
+							</button>
+							<button
+								class="filters__btn products-top__btn filter-1"
+								type="button"
+								data-filter=".category-l1"
+							>
+								Lighting
+							</button>
+							<button
+								class="filters__btn products-top__btn filter-1"
+								type="button"
+								data-filter=".category-d1"
+							>
+								Decor
+							</button>
 						</div>
 						<div class="products-top__content">
-							<div class="products-top__item">
+							<div class="products-top__item mix category-l1 category-d1">
 								<div class="products-top__item-inner">
 									<img
 										class="products-top__item-img"
@@ -262,7 +288,7 @@
 								</a>
 								<p class="products-top__item-price">$29.00</p>
 							</div>
-							<div class="products-top__item">
+							<div class="products-top__item mix category-l1">
 								<div class="products-top__item-inner">
 									<img
 										class="products-top__item-img"
@@ -322,7 +348,7 @@
 								</a>
 								<p class="products-top__item-price">$29.00</p>
 							</div>
-							<div class="products-top__item">
+							<div class="products-top__item mix category-f1 category-d1">
 								<div class="products-top__item-inner">
 									<img
 										class="products-top__item-img"
@@ -382,7 +408,7 @@
 								</a>
 								<p class="products-top__item-price">$29.00</p>
 							</div>
-							<div class="products-top__item">
+							<div class="products-top__item mix category-d1 category-ch1">
 								<div class="products-top__item-inner">
 									<img
 										class="products-top__item-img"
@@ -442,7 +468,7 @@
 								</a>
 								<p class="products-top__item-price">$29.00</p>
 							</div>
-							<div class="products-top__item">
+							<div class="products-top__item mix category-l2">
 								<div class="products-top__item-inner">
 									<img
 										class="products-top__item-img"
@@ -502,7 +528,7 @@
 								</a>
 								<p class="products-top__item-price">$29.00</p>
 							</div>
-							<div class="products-top__item">
+							<div class="products-top__item mix category-ch1 category-f1">
 								<div class="products-top__item-inner">
 									<img
 										class="products-top__item-img"
@@ -562,7 +588,7 @@
 								</a>
 								<p class="products-top__item-price">$29.00</p>
 							</div>
-							<div class="products-top__item">
+							<div class="products-top__item mix category-f1">
 								<div class="products-top__item-inner">
 									<img
 										class="products-top__item-img"
@@ -622,7 +648,7 @@
 								</a>
 								<p class="products-top__item-price">$29.00</p>
 							</div>
-							<div class="products-top__item">
+							<div class="products-top__item mix category-l1">
 								<div class="products-top__item-inner">
 									<img
 										class="products-top__item-img"
@@ -736,16 +762,44 @@
 					<div class="design__inner">
 						<h2 class="title design__title">New Design</h2>
 						<div class="filters">
-							<button class="filters__btn filters__btn--active design__btn">
+							<button
+								class="filters__btn design__btn filter-2"
+								type="button"
+								data-filter="all"
+							>
 								All
 							</button>
-							<button class="filters__btn design__btn">Furnitures</button>
-							<button class="filters__btn design__btn">Chairs</button>
-							<button class="filters__btn design__btn">Lighting</button>
-							<button class="filters__btn design__btn">Decor</button>
+							<button
+								class="filters__btn design__btn filter-2"
+								type="button"
+								data-filter=".category-f2"
+							>
+								Furnitures
+							</button>
+							<button
+								class="filters__btn design__btn filter-2"
+								type="button"
+								data-filter=".category-ch2"
+							>
+								Chairs
+							</button>
+							<button
+								class="filters__btn design__btn filter-2"
+								type="button"
+								data-filter=".category-l2"
+							>
+								Lighting
+							</button>
+							<button
+								class="filters__btn design__btn filter-2"
+								type="button"
+								data-filter=".category-d2"
+							>
+								Decor
+							</button>
 						</div>
 						<div class="design__content">
-							<a class="design__item-link" href="#">
+							<a class="design__item-link mix category-l2 category-d2" href="#">
 								<div class="design__item">
 									<div class="design__item-inner">
 										<h4 class="design__item-title">Beat Flat Pendant Black</h4>
@@ -758,7 +812,10 @@
 									/>
 								</div>
 							</a>
-							<a class="design__item-link" href="#">
+							<a
+								class="design__item-link mix category-ch2 category-l2"
+								href="#"
+							>
 								<div class="design__item">
 									<div class="design__item-inner">
 										<h4 class="design__item-title">Lampe Sur Pieds Bamboo</h4>
@@ -771,7 +828,7 @@
 									/>
 								</div>
 							</a>
-							<a class="design__item-link" href="#">
+							<a class="design__item-link mix category-f2 category-d2" href="#">
 								<div class="design__item">
 									<div class="design__item-inner">
 										<h4 class="design__item-title">Rattan Rocking Chair</h4>
@@ -784,7 +841,10 @@
 									/>
 								</div>
 							</a>
-							<a class="design__item-link" href="#">
+							<a
+								class="design__item-link mix category-d2 category-ch2"
+								href="#"
+							>
 								<div class="design__item">
 									<div class="design__item-inner">
 										<h4 class="design__item-title">Rattan Rocking Chair</h4>
@@ -797,7 +857,7 @@
 									/>
 								</div>
 							</a>
-							<a class="design__item-link" href="#">
+							<a class="design__item-link mix category-l2 category-f2" href="#">
 								<div class="design__item">
 									<div class="design__item-inner">
 										<h4 class="design__item-title">Rattan Rocking Chair</h4>
@@ -810,7 +870,10 @@
 									/>
 								</div>
 							</a>
-							<a class="design__item-link" href="#">
+							<a
+								class="design__item-link mix category-ch2 category-f2"
+								href="#"
+							>
 								<div class="design__item">
 									<div class="design__item-inner">
 										<h4 class="design__item-title">Lampe Sur Pieds Bamboo</h4>

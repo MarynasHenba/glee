@@ -10,7 +10,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		@extend %rubik-500;
 	}
 }
 
@@ -23,6 +22,7 @@
 	}
 	&__list-link {
 		color: $default;
+		@extend %rubik-500;
 	}
 }
 
