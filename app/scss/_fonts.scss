@@ -67,3 +67,13 @@
        url('../fonts/Rubik-Medium.woff2') fotmat('woff2');
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Rubik-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Rubik-Bold'),
+       url('../fonts/Rubik-Bold.woff2') fotmat('woff2'),
+       url('../fonts/Rubik-Bold.woff2') fotmat('woff2');
+  font-display: swap;
+}
