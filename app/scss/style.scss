@@ -174,9 +174,17 @@
 		padding: 40px 139px;
 		display: flex;
 		align-items: center;
+		position: relative;
 	}
 	&__content-item + .info__content-item {
-		border-left: 1px solid #e8e4df;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 1px;
+			height: 180px;
+			background-color: #e8e4df;
+			left: 0;
+		}
 	}
 	&__content-inner {
 		margin-left: 25px;
