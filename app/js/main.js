@@ -1,4 +1,25 @@
 $(function () {
+
+	$(".rating").rateYo({
+		starWidth: "11px",
+		normalFill: "#d6d6d6",
+		ratedFill: "#ffcc00",
+		readOnly: true,
+		spacing: "8px",
+	});
+
+	$(".filter-price__input").ionRangeSlider({
+		type: "double",
+		onStart: function (data) {
+			$(".filter-price__from").text(data.from);
+			$(".filter-price__to").text(data.to);
+		},
+		onChange: function (data) {
+			$(".filter-price__from").text(data.from);
+			$(".filter-price__to").text(data.to);
+		},
+	});
+
 	$(".top-slider__inner").slick({
 		arrows: false,
 		dots: true,
@@ -7,16 +28,10 @@ $(function () {
 		autoplaySpeed: 5000,
 	});
 
-	// var containerEl1 = document.querySelector("[.products__content]");
-	// var containerEl2 = document.querySelector("[.design__content]");
-
 	var mixerFirst = mixitup(".products-top__content", {
 		selectors: {
 			control: ".filter-1",
 		},
-		// animation: {
-		// 	duration: 3000,
-		// },
 	});
 
 	var mixerSecond = mixitup(".design__content", {
