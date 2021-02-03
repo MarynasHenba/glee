@@ -1,7 +1,43 @@
 $(function () {
 
+	$(".details-bottom__btn").on('click', function(e) {
+		e.preventDefault();
+		$(".details-bottom__btn").removeClass("details-bottom__btn--active");
+		$(this).addClass("details-bottom__btn--active");
+		
+		$(".details-bottom__content-item").removeClass(
+			".details-bottom__content-item--active");
+		$($(this).attr('href')).addClass(".details-bottom__content-item--active");
+		
+	});
+
+	$(".details-top-slide__small").slick({
+		asNavFor: ".details-top-slide__big",
+		focusOnSelect: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		vertical: true,
+		draggable: false,
+		// fade: true,
+	});
+	$(".details-top-slide__big").slick({
+		asNavFor: ".details-top-slide__small",
+		draggable: false,
+		arrows: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+	});
+
+	// $(".related-products__inner").slick({
+	// 	arrows: true,
+	// 	slidesToShow: 4,
+	// 	slidesToScroll: 1,
+	// 	infinite: true,
+	// });
+
 	$(".rating").rateYo({
-		starWidth: "11px",
+		starWidth: "13px",
 		normalFill: "#d6d6d6",
 		ratedFill: "#ffcc00",
 		readOnly: true,
