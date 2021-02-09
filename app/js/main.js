@@ -1,13 +1,5 @@
 $(function () {
-	
-	let map;
-
-	function initMap() {
-		map = new google.maps.Map(document.getElementById("map"), {
-			center: { lat: -34.397, lng: 150.644 },
-			zoom: 8,
-		});
-	}
+	$(".details-top__num").styler();
 
 	$(".details-bottom__btn").on("click", function (e) {
 		e.preventDefault();
@@ -15,9 +7,9 @@ $(function () {
 		$(this).addClass("details-bottom__btn--active");
 
 		$(".details-bottom__content-item").removeClass(
-			".details-bottom__content-item--active"
+			"details-bottom__content-item--active"
 		);
-		$($(this).attr("href")).addClass(".details-bottom__content-item--active");
+		$($(this).attr("href")).addClass("details-bottom__content-item--active");
 	});
 
 	$(".details-top-slide__small").slick({
