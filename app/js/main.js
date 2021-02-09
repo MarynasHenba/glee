@@ -1,14 +1,23 @@
 $(function () {
+	
+	let map;
 
-	$(".details-bottom__btn").on('click', function(e) {
+	function initMap() {
+		map = new google.maps.Map(document.getElementById("map"), {
+			center: { lat: -34.397, lng: 150.644 },
+			zoom: 8,
+		});
+	}
+
+	$(".details-bottom__btn").on("click", function (e) {
 		e.preventDefault();
 		$(".details-bottom__btn").removeClass("details-bottom__btn--active");
 		$(this).addClass("details-bottom__btn--active");
-		
+
 		$(".details-bottom__content-item").removeClass(
-			".details-bottom__content-item--active");
-		$($(this).attr('href')).addClass(".details-bottom__content-item--active");
-		
+			".details-bottom__content-item--active"
+		);
+		$($(this).attr("href")).addClass(".details-bottom__content-item--active");
 	});
 
 	$(".details-top-slide__small").slick({
