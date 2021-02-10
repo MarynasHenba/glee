@@ -219,7 +219,7 @@
 			column-gap: 30px;
 		}
 		&__item {
-			max-width: 270px;
+			width: 270px;
 			height: 380px;
 			box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
 			border-radius: 10px;
@@ -1076,7 +1076,7 @@
 }
 
 .jq-ry-container {
-	padding: 10px 0;
+	padding: 15px 0;
 }
 
 .pagination {
@@ -1172,20 +1172,20 @@
 			position: relative;
 		}
 		.jq-number__spin {
-			 position: absolute;
-   	 	 width: 50px;
-   	 	 height: 50px;
-   	 	 border: none; 
-   	 	 border-bottom-color: transparent; 
-   	 	 border-radius: 0; 
-   	 	 background: transparent; 
-   	 	 box-shadow: none; 
-   	 	 text-shadow: 1px 1px #fff; 
-			 cursor: pointer;
-			 &::after {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			border: none;
+			border-bottom-color: transparent;
+			border-radius: 0;
+			background: transparent;
+			box-shadow: none;
+			text-shadow: 1px 1px #fff;
+			cursor: pointer;
+			&::after {
 				top: 0;
 				left: 0;
-			 }
+			}
 		}
 		.jq-number__spin.minus {
 			left: 0;
@@ -1195,8 +1195,8 @@
 				width: 6px;
 				height: 1px;
 				background-color: #111;
-				top: 23px;
-				left: 20px;
+				top: 24px;
+				left: 22px;
 				border: none;
 			}
 		}
@@ -1206,8 +1206,8 @@
 			&::after {
 				content: "+";
 				background-color: #111;
-				top: 11px;
-				left: 19px;
+				top: 13px;
+				left: 20px;
 				border: none;
 			}
 		}
@@ -1222,6 +1222,7 @@
 			background-color: $button;
 			margin-left: 15px;
 			border-radius: 5px;
+			cursor: pointer;
 		}
 	}
 	&-top__descr,
@@ -1271,11 +1272,55 @@
 		margin-bottom: 40px;
 	}
 	&__inner {
-		display: grid;
-		grid-template-columns: repeat(4, 270px);
+		display: flex;
+		flex-wrap: wrap;
 		column-gap: 30px;
 		// justify-content: space-between;
 		margin-bottom: 120px;
+	}
+	.products-top__item {
+		display: flex !important;
+		max-width: 270px;
+		margin: 35px 0 35px 22px;
+	}
+	.slick-arrow {
+		font-size: 0;
+		position: absolute;
+		top: -100px;
+		right: 0;
+		width: 45px;
+		height: 45px;
+		border: 2px solid #edf1f4;
+		border-radius: 5px;
+		background-color: #fff;
+		cursor: pointer;
+		&:hover {
+			border-color: $button;
+		}
+	}
+	.slick-prev {
+		right: 85px;
+		&::after {
+			content: "";
+			position: absolute;
+			background-image: url("../images/icons/arrow-prev.svg");
+			width: 22px;
+			height: 9px;
+			left: 10px;
+			top: 16px;
+		}
+	}
+	.slick-next {
+		right: 25px;
+		&::after {
+			content: "";
+			position: absolute;
+			background-image: url("../images/icons/arrow-next.svg");
+			width: 22px;
+			height: 9px;
+			left: 10px;
+			top: 16px;
+		}
 	}
 }
 
@@ -1544,12 +1589,12 @@
 			font-size: 16px;
 			line-height: 20px;
 			color: #666;
-			padding: 20px;
+			padding: 20px 45px 20px 20px;
 		}
 		&__text {
 			width: 100%;
 			height: 100%;
-			padding: 20px;
+			padding: 20px 45px 20px 20px;
 			border: none;
 			resize: none;
 		}

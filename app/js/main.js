@@ -30,12 +30,12 @@ $(function () {
 		fade: true,
 	});
 
-	// $(".related-products__inner").slick({
-	// 	arrows: true,
-	// 	slidesToShow: 4,
-	// 	slidesToScroll: 1,
-	// 	infinite: true,
-	// });
+	$(".related-products__inner").slick({
+		arrows: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		infinite: true,
+	});
 
 	$(".rating").rateYo({
 		starWidth: "13px",
