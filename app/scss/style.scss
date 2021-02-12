@@ -31,20 +31,46 @@
 	justify-content: space-between;
 	align-items: center;
 	&__item {
-		padding: 15px;
+		padding: 15px 0;
 	}
-	&__item:first-child {
+	&__link--search,
+	&__link--menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+	}
+	&__link--search {
 		margin-right: 20px;
 		background-color: #edf1f4;
-		border-radius: 50%;
 	}
-	&__item:last-child {
+	&__link--menu {
 		margin-left: 20px;
 		background-color: #a3bbc8;
-		border-radius: 50%;
+	}
+	&__link--like {
+		width: 90px;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 30px 0 0 30px;
+		background-color: $accent;
+		position: relative;
+	}
+	&__link--cart {
+		width: 90px;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0 30px 30px 0;
+		background-color: $accent;
+		position: relative;
 	}
 	&__wrapper {
-		background-color: $accent;
 		width: 180px;
 		display: flex;
 		justify-content: space-around;
@@ -69,8 +95,8 @@
 		height: 15px;
 		border-radius: 50%;
 		background-color: #fff;
-		top: -8px;
-		right: -8px;
+		top: 7px;
+		right: 27px;
 		font-size: 10px;
 		line-height: 15px;
 		color: $default;
@@ -286,23 +312,27 @@
 			justify-content: space-between;
 		}
 		&__item {
+			width: 870px;
+			max-height: 380px;
+			display: flex;
 			background-color: #feefe2;
-			padding: 100px 130px 100px 380px;
-			position: relative;
+			padding: 80px 140px;
 			margin-top: 100px;
 		}
-		&__item--pos {
-			padding-top: 85px;
-			padding-bottom: 85px;
-		}
+		// &__item--pos {
+		// 	padding-top: 85px;
+		// 	padding-bottom: 85px;
+		// }
 		&__item-img {
-			position: absolute;
-			top: -100px;
-			left: 135px;
+			margin-right: 20px;
+			margin-top: -190px;
 		}
 		&__item-inner {
-			max-width: 340px;
-			margin-left: 10px;
+			display: inline-flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 315px;
+			margin-left: auto;
 		}
 		&__item-title {
 			color: $default;
@@ -312,11 +342,14 @@
 			margin-bottom: 10px;
 		}
 		&__item-text {
-			color: &title;
+			color: $title;
 			font-size: 16px;
-			line-height: 30px;
+			line-height: 25px;
 			@extend %dmsans-400;
 			margin-bottom: 25px;
+		}
+		&__item-text:first-child {
+			margin: 30px 0;
 		}
 	}
 }
