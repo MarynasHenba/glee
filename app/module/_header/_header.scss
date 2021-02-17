@@ -14,9 +14,20 @@
 	&__list-item + .menu__list-item {
 		padding-left: 35px;
 	}
+	// &__list-item {
+	// 	width: 100%;
+	// // &:hover {
+	// // 		color: $title;
+	// // 		border-bottom: 1px solid $title;
+	// // 	}
+	// }
 	&__list-link {
 		color: $default;
 		@extend %rubik-500;
+		&:hover {
+			color: $title;
+			border-bottom: 1px solid $title;
+		}
 	}
 }
 
@@ -96,5 +107,114 @@
 		color: $default;
 		text-align: center;
 		@extend %dmsans-400;
+	}
+}
+
+@media (max-width: 1200px) {
+	.header {
+		padding: 30px 0;
+	}
+}
+
+@media (max-width: 1060px) {
+	.menu {
+		&__list {
+			width: 100%;
+			position: absolute;
+			top: 115px;
+			left: 0;
+			right: 0;
+			// background-color: #fff;
+			// opacity: 70%;
+			flex-direction: column;
+			align-items: center;
+			transform: translateY(-200%);
+			transition: all 0.4s;
+			z-index: 5;
+			&.menu__list--active {
+				transform: translateY(0%);
+				transition: all 0.4s;
+			}
+		}
+		&__list-item + .menu__list-item {
+			padding-left: 15px;
+		}
+		&__list-item {
+			width: 100%;
+			padding: 5px 15px;
+			text-align: center;
+		}
+		&__list-link {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 720px) {
+	.menu__list {
+		&.menu__list--active {
+			transform: translateY(-15%);
+		}
+	}
+	.user-nav {
+		&__item {
+			padding: 0;
+		}
+		&__link--search,
+		&__link--menu {
+			width: 45px;
+			height: 45px;
+		}
+		&__wrapper {
+			max-width: 170px;
+		}
+		&__link--like,
+		&__link--cart {
+			width: 85px;
+			height: 45px;
+		}
+	}
+}
+
+@media (max-width: 560px) {
+	.menu__list.menu__list--active {
+		transform: translateY(-20%);
+	}
+	.header {
+		padding: 20px 0;
+	}
+	.user-nav {
+		&__link--search,
+		&__link--menu {
+			width: 40px;
+			height: 40px;
+		}
+		&__link--like,
+		&__link--cart {
+			width: 60px;
+			height: 40px;
+		}
+		&__link--search {
+			margin-right: 10px;
+		}
+		&__link--menu {
+			margin-left: 10px;
+		}
+		&__num {
+			top: 4px;
+			right: 12px;
+		}
+		&__wrapper {
+			max-width: 120px;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.user-nav {
+		&__wrapper {
+			display: none;
+		}
 	}
 }

@@ -1,4 +1,9 @@
 $(function () {
+
+	$('.user-nav__link--menu').on('click', function () {
+		$('.menu__list').toggleClass('menu__list--active')
+	});
+
 	$(".details-top__num").styler();
 
 	$(".details-bottom__btn").on("click", function (e) {
