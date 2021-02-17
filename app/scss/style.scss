@@ -68,6 +68,11 @@
 		@extend %rubik-500;
 		padding: 20px 0;
 	}
+	&__register-btn:hover {
+    color: #fffefe;
+		background-color: #a3bbc8;
+    border: 2px solid #a3bbc8;
+	}
 	&__btn {
 		border: none;
 		background-color: $button;
