@@ -1,0 +1,100 @@
+.header {
+	padding: 50px 0;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.menu {
+	&__list {
+		display: flex;
+	}
+	&__list-item + .menu__list-item {
+		padding-left: 35px;
+	}
+	&__list-link {
+		color: $default;
+		@extend %rubik-500;
+	}
+}
+
+.user-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__item {
+		padding: 15px 0;
+	}
+	&__link--search,
+	&__link--menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+	}
+	&__link--search {
+		margin-right: 20px;
+		background-color: #edf1f4;
+	}
+	&__link--menu {
+		margin-left: 20px;
+		background-color: #a3bbc8;
+	}
+	&__link--like {
+		width: 90px;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 30px 0 0 30px;
+		background-color: $accent;
+		position: relative;
+	}
+	&__link--cart {
+		width: 90px;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0 30px 30px 0;
+		background-color: $accent;
+		position: relative;
+	}
+	&__wrapper {
+		width: 180px;
+		display: flex;
+		justify-content: space-around;
+		border-radius: 30px;
+		position: relative;
+	}
+	&__wrapper::after {
+		content: "";
+		position: absolute;
+		width: 1px;
+		height: 35px;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: #fde7d3;
+	}
+	&__link--accent {
+		position: relative;
+	}
+	&__num {
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background-color: #fff;
+		top: 7px;
+		right: 27px;
+		font-size: 10px;
+		line-height: 15px;
+		color: $default;
+		text-align: center;
+		@extend %dmsans-400;
+	}
+}

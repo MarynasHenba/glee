@@ -1,0 +1,120 @@
+.products {
+	padding-top: 75px;
+	&-top {
+		margin-bottom: 75px;
+		&__content {
+			display: grid;
+			grid-template-columns: repeat(4, 270px);
+			grid-template-rows: repeat(2, 380px);
+			row-gap: 35px;
+			column-gap: 30px;
+		}
+		&__item {
+			width: 270px;
+			height: 380px;
+			box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+			border-radius: 10px;
+			background-color: #fff;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-end;
+			transition: opacity 0.3s;
+		}
+		&__item-inner {
+			margin-bottom: 48px;
+			position: relative;
+		}
+		&__item-buttons {
+			display: flex;
+			align-items: center;
+			position: absolute;
+			text-align: center;
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		&__item-btn {
+			width: 45px;
+			height: 45px;
+			background-color: #fff;
+			box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+			border-radius: 50%;
+			padding-top: 13px;
+			opacity: 0;
+			transition: all 0.5s;
+			&:hover {
+				background-color: $button;
+				path {
+					fill: #fff;
+				}
+			}
+		}
+
+		&__item-btn + .products-top__item-btn {
+			margin-left: 15px;
+		}
+		&__item:hover .products-top__item-btn {
+			opacity: 1;
+		}
+		&__item-name {
+			font-size: 16px;
+			line-height: 40px;
+			@extend %dmsans-700;
+			color: $title;
+		}
+		&__item-price {
+			font-size: 16px;
+			line-height: 24px;
+			color: $button;
+			@extend %dmsans-700;
+			margin-bottom: 35px;
+		}
+	}
+	&-bottom {
+		&__content {
+			display: flex;
+			justify-content: space-between;
+		}
+		&__item {
+			width: 870px;
+			max-height: 380px;
+			display: flex;
+			background-color: #feefe2;
+			padding: 80px 140px;
+			margin-top: 100px;
+		}
+		// &__item--pos {
+		// 	padding-top: 85px;
+		// 	padding-bottom: 85px;
+		// }
+		&__item-img {
+			margin-right: 20px;
+			margin-top: -190px;
+		}
+		&__item-inner {
+			display: inline-flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 315px;
+			margin-left: auto;
+		}
+		&__item-title {
+			color: $default;
+			font-size: 26px;
+			line-height: 32px;
+			@extend %dmsans-700;
+			margin-bottom: 10px;
+		}
+		&__item-text {
+			color: $title;
+			font-size: 16px;
+			line-height: 25px;
+			@extend %dmsans-400;
+			margin-bottom: 25px;
+		}
+		&__item-text:first-child {
+			margin: 30px 0;
+		}
+	}
+}
