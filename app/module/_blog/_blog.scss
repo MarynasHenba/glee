@@ -171,7 +171,8 @@
 		&__inner {
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(2, 1fr);
-			grid-gap: 20px;
+			column-gap: 20px;
+			row-gap: 30px;
 			max-width: 760px;
 			margin: 0 auto;
 		}
