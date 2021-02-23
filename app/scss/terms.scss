@@ -8,6 +8,36 @@
 @import "../module/_blog/_blog";
 @import "../module/_footer/_footer";
 
+.terms {
+	padding: 115px 0;
+	&__title {
+		font-size: 24px;
+		line-height: 40px;
+		color: $title;
+		@extend %rubik-500;
+		margin-bottom: 27px;
+	}
+	&__types,
+	&__colecting {
+		margin-bottom: 70px;
+	}
+	&__types {
+		&-list {
+			list-style: decimal-leading-zero;
+			.terms__text {
+				margin-left: 30px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 30px;
+		color: $title;
+		@extend %rubik-400;
+	}
+}
+
 @media (max-width: 980px) {
   .terms {
     padding: 60px 0;
