@@ -1,6 +1,5 @@
 .filter {
 	width: 275px;
-	// margin-bottom: 40px;
 	margin-right: 30px;
 	&__title {
 		display: inline-block;
@@ -225,5 +224,37 @@
 	}
 	&__prev {
 		display: none;
+	}
+}
+
+@media (max-width: 960px) {
+	.filter {
+		width: 100%;
+		&-category__checkbox,
+		&-brand__checkbox {
+			width: 100%;
+		}
+		&-resent {
+			display: none;
+		}
+		&-price {
+			.irs--flat .irs-line {
+				max-width: 500px;
+			}
+			&__label {
+				max-width: 500px;
+			}
+		}
+	}
+}
+
+@media (max-width: 620px) {
+	.filter {
+		&__item {
+			margin-bottom: 30px;
+		}
+		&__title {
+			margin-bottom: 20px;
+		}
 	}
 }
