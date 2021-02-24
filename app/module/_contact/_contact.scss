@@ -1,0 +1,173 @@
+.contact {
+	padding: 120px 0;
+	&-caption {
+		text-align: center;
+		margin-bottom: 60px;
+		&__subtitle {
+			font-size: 16px;
+			line-height: 20px;
+			color: $button;
+			@extend %poppins-700;
+		}
+		&__title {
+			font-size: 35px;
+			line-height: 40px;
+			color: $default;
+			@extend %dmsans-700;
+		}
+	}
+	&-info {
+		display: flex;
+		align-items: center;
+		margin-bottom: 120px;
+		&__item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 370px;
+			height: 380px;
+			text-align: center;
+			padding: 75px 50px;
+			background-color: #fbfbfb;
+			transition: all 0.5s;
+			border: 2px solid #fbfbfb;
+			& + .contact-info__item {
+				margin-left: 30px;
+			}
+			&:hover {
+				border: 2px solid $button;
+				path {
+					fill: #fff;
+				}
+				.contact-info__img::before {
+					background-color: $button;
+				}
+			}
+		}
+		&__img {
+			position: relative;
+			width: 80px;
+			z-index: 0;
+			margin-bottom: 60px;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 80px;
+				height: 80px;
+				background-color: #fff;
+				border-radius: 20px;
+				box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				z-index: -1;
+			}
+		}
+		&__title {
+			font-size: 20px;
+			line-height: 26px;
+			color: #222;
+			@extend %dmsans-700;
+			margin-bottom: 20px;
+		}
+		&__text {
+			font-size: 16px;
+			line-height: 30px;
+			color: #565872;
+		}
+		&__link {
+			color: inherit;
+		}
+	}
+	&-form {
+		&__inner {
+			display: flex;
+		}
+		&__form {
+			max-width: 620px;
+			margin-right: 50px;
+		}
+		&__input-box {
+			display: inline-block;
+			width: 300px;
+			height: 50px;
+			margin-bottom: 25px;
+			position: relative;
+			& + .contact-form__input-box {
+				margin-left: 15px;
+			}
+		}
+		&__input {
+			display: inline-flex;
+			align-items: center;
+		}
+		&__input,
+		&__text {
+			width: 100%;
+			height: 100%;
+			border: none;
+			background-color: #fafafa;
+			line-height: 20px;
+			color: #565872;
+			padding: 15px 45px 15px 20px;
+			text-transform: uppercase;
+		}
+		&__text-box {
+			width: 620px;
+			height: 175px;
+			margin-bottom: 30px;
+			position: relative;
+		}
+		&__text {
+			resize: none;
+		}
+		&__input-box,
+		&__text-box {
+			&::after {
+				content: "";
+				position: absolute;
+				right: 20px;
+				top: 18px;
+			}
+		}
+		&__input-box--name {
+			&::after {
+				background-image: url("../images/icons/form-user-dark.svg");
+				width: 14px;
+				height: 13px;
+			}
+		}
+		&__input-box--email {
+			&::after {
+				background-image: url("../images/icons/form-email-dark.svg");
+				width: 18px;
+				height: 12px;
+			}
+		}
+		&__input-box--message {
+			&::after {
+				background-image: url("../images/icons/form-comment-dark.svg");
+				width: 18px;
+				height: 15px;
+				top: 15px;
+			}
+		}
+		&__btn {
+			border: none;
+			width: 200px;
+			background-color: $button;
+			border-radius: 5px;
+			font-size: 15px;
+			line-height: 20px;
+			color: #fff;
+			@extend %poppins-600;
+			text-transform: uppercase;
+			padding: 15px;
+			cursor: pointer;
+		}
+	}
+	#map {
+		width: 500px;
+		height: 335px;
+	}
+}
