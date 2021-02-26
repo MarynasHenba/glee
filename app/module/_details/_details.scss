@@ -1,0 +1,156 @@
+.details {
+	margin: 115px 0;
+	&-top {
+		.jq-ry-container {
+			padding: 10px 5px;
+		}
+		&__inner {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&__slide {
+			display: flex;
+			width: 550px;
+			margin-right: 65px;
+		}
+		&-slide__small {
+			width: 135px;
+			margin-right: 25px;
+		}
+		&-slide__small-item {
+			width: 135px;
+			margin-bottom: 15px;
+			img {
+				width: 135px;
+				height: 160px;
+				object-fit: cover;
+			}
+		}
+		&-slide__big {
+			width: 385px;
+		}
+		&-slide__big-item {
+			width: 385px;
+			img {
+				width: 385px;
+				height: 530px;
+				object-fit: cover;
+			}
+		}
+		&__info {
+			width: 545px;
+		}
+		&__form {
+			margin-bottom: 55px;
+		}
+		.jq-number {
+			padding: 0;
+		}
+		.jq-number__field {
+			width: 100%;
+			border: none;
+			position: relative;
+		}
+		.jq-number__field input {
+			width: 150px;
+			height: 50px;
+			border: 1px solid $button;
+			text-align: center;
+			box-shadow: none;
+			position: relative;
+		}
+		.jq-number__spin {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			border: none;
+			border-bottom-color: transparent;
+			border-radius: 0;
+			background: transparent;
+			box-shadow: none;
+			text-shadow: 1px 1px #fff;
+			cursor: pointer;
+			&::after {
+				top: 0;
+				left: 0;
+			}
+		}
+		.jq-number__spin.minus {
+			left: 0;
+			border-right: 1px solid $button;
+			&::after {
+				content: "";
+				width: 6px;
+				height: 1px;
+				background-color: #111;
+				top: 24px;
+				left: 22px;
+				border: none;
+			}
+		}
+		.jq-number__spin.plus {
+			right: 0;
+			border-left: 1px solid $button;
+			&::after {
+				content: "+";
+				background-color: #111;
+				top: 13px;
+				left: 20px;
+				border: none;
+			}
+		}
+		&__btn {
+			width: 210px;
+			font-size: 15px;
+			line-height: 20px;
+			border: none;
+			color: #fff;
+			text-transform: uppercase;
+			padding: 15px;
+			background-color: $button;
+			margin-left: 15px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	}
+	&-top__descr,
+	&-bottom__text {
+		line-height: 30px;
+		color: $title;
+		a {
+			color: inherit;
+		}
+	}
+	&-bottom {
+		margin-top: 100px;
+		&__buttons {
+			text-align: center;
+			margin-bottom: 35px;
+		}
+		&__btn {
+			font-size: 18px;
+			line-height: 20px;
+			color: $title;
+			@extend %rubik-500;
+			border: none;
+			width: 240px;
+			padding: 15px;
+			background-color: #edf1f4;
+			& + .details-bottom__btn {
+				margin-left: 15px;
+			}
+		}
+		&__btn--active,
+		&__btn:hover {
+			background-color: $button;
+			color: #fff;
+		}
+		&__content-item {
+			display: none;
+			&.details-bottom__content-item--active {
+				display: block;
+			}
+		}
+	}
+}

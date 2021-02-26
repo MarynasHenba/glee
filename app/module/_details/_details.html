@@ -1,0 +1,116 @@
+<section class="details">
+	<div class="container--small">
+		<div class="details-top">
+			<div class="details-top__inner">
+				<div class="details-top__slide details-top-slide">
+					<div class="details-top-slide__small">
+						<div class="details-top-slide__small-item">
+							<img src="images/products/details/1.jpg" alt="product details" />
+						</div>
+						<div class="details-top-slide__small-item">
+							<img src="images/products/details/1.jpg" alt="product details" />
+						</div>
+						<div class="details-top-slide__small-item">
+							<img src="images/products/details/1.jpg" alt="product details" />
+						</div>
+					</div>
+					<div class="details-top-slide__big">
+						<div class="details-top-slide__big-item">
+							<img src="images/products/details/1.jpg" alt="product details" />
+						</div>
+						<div class="details-top-slide__big-item">
+							<img src="images/products/details/1.jpg" alt="product details" />
+						</div>
+						<div class="details-top-slide__big-item">
+							<img src="images/products/details/1.jpg" alt="product details" />
+						</div>
+					</div>
+				</div>
+
+				<div class="details-top__info">
+					<a class="shop-content__link" href="#">
+						<h5 class="shop-content__name">Wooden radio</h5>
+					</a>
+					<div class="rating" data-rateyo-rating="4"></div>
+					<p class="shop-content__price">$29.00</p>
+					<p class="shop-content__text">
+						consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					</p>
+
+					<form class="details-top__form" action="#">
+						<input class="details-top__num" type="number" value="1" min="1" />
+						<button class="details-top__btn" type="submit">Add to cart</button>
+					</form>
+					<div class="details-top__descr">
+						<p class="details-top__descr-text">
+							SKU:
+							<span>014</span>
+						</p>
+						<p class="details-top__descr-text">
+							Category:
+							<a href="#">Lights</a>
+						</p>
+						<p class="details-top__descr-text">
+							Tag:
+							<span>Decorative</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="details-bottom">
+			<div class="details-bottom__buttons">
+				<a
+					class="details-bottom__btn details-bottom__btn--active"
+					href="#tab-1"
+				>
+					Description
+				</a>
+				<a class="details-bottom__btn" href="#tab-2">
+					Additional information
+				</a>
+				<a class="details-bottom__btn" href="#tab-3">
+					Reviews<span>(2)</span>
+				</a>
+			</div>
+			<div class="details-bottom__content">
+				<div
+					class="details-bottom__content-item details-bottom__content-item--active"
+					id="tab-1"
+				>
+					<p class="details-bottom__text">
+						consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem
+						ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+						veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+						ea commodo consequat.
+					</p>
+				</div>
+				<div class="details-bottom__content-item" id="tab-2">
+					<div class="details-top__descr">
+						<p class="details-top__descr-text">
+							SKU:
+							<span>014</span>
+						</p>
+						<p class="details-top__descr-text">
+							Category:
+							<a href="#">Lights</a>
+						</p>
+						<p class="details-top__descr-text">
+							Tag:
+							<span>Decorative</span>
+						</p>
+					</div>
+				</div>
+				<div class="details-bottom__content-item" id="tab-3">
+					{% include 'app/module/_comments/_comments.html' %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -64,10 +64,27 @@
 		&__wrapper {
 			display: block;
 		}
+		&__filters-btn {
+			display: block;
+			border: none;
+			padding: 0;
+			text-align: center;
+			position: fixed;
+			right: 15px;
+			bottom: 50px;
+			background-color: $button;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			z-index: 101;
+		}
+		&__filters-img {
+			margin: 0 auto;
+		}
 		&-content {
-      &__inner {
-        margin-bottom: 0;
-      }
+			&__inner {
+				margin-bottom: 0;
+			}
 			&__list-item {
 				width: 100%;
 				justify-content: space-evenly;
@@ -119,7 +136,7 @@
 				line-height: 30px;
 			}
 			&__text {
-        margin: 10px 0;
+				margin: 10px 0;
 				line-height: 24px;
 			}
 		}
@@ -130,35 +147,35 @@
 	.shop {
 		padding: 35px 0;
 		&-content {
-      &__list-item {
-        flex-direction: column;
-        align-items: center;
-      }
-      &__wrapper {
-        min-width: 300px;
-        min-height: 280px;
-        margin: 0 0 20px 0;
-      }
-      &__info {
-        text-align: center;
-      }
-      .jq-ry-container {
+			&__list-item {
+				flex-direction: column;
+				align-items: center;
+			}
+			&__wrapper {
+				min-width: 300px;
+				min-height: 280px;
+				margin: 0 0 20px 0;
+			}
+			&__info {
+				text-align: center;
+			}
+			.jq-ry-container {
 				margin: 0 auto;
 			}
-      &__item-buttons {
-        justify-content: center;
-      }
+			&__item-buttons {
+				justify-content: center;
+			}
 		}
 	}
 }
 
 @media (max-width: 380px) {
-  .shop {
-    &-content {
-      &__wrapper {
-        min-width: 250px;
-        margin-bottom: 15px;
-      }
-    }
-  }
+	.shop {
+		&-content {
+			&__wrapper {
+				min-width: 250px;
+				margin-bottom: 15px;
+			}
+		}
+	}
 }

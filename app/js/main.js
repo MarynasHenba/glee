@@ -4,6 +4,10 @@ $(function () {
 		$('.menu__list').toggleClass('menu__list--active')
 	});
 
+	$('.shop__filters-btn').on('click', function() {
+		$('.filter').slideToggle();
+	});
+
 	$(".details-top__num").styler();
 
 	$(".details-bottom__btn").on("click", function (e) {
@@ -33,6 +37,14 @@ $(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		fade: true,
+		responsive: [
+			{
+				breakpoint: 1051,
+				settings: {
+					draggable: true,
+				}
+			}
+		]
 	});
 
 	$(".related-products__inner").slick({
@@ -40,6 +52,26 @@ $(function () {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		infinite: true,
+		responsive: [
+			{
+				breakpoint: 1160,
+				settings: {
+					slidesToShow: 3,
+				},
+			},
+			{
+				breakpoint: 981,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+			{
+				breakpoint: 611,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
 	});
 
 	$(".rating").rateYo({
