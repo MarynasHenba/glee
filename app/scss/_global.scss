@@ -1,0 +1,169 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-color: #fff;
+	font-size: 16px;
+	line-height: 24px;
+	@extend %rubik-400;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.container--large {
+	max-width: 1800px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.container--medium {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.container--small {
+	display: block !important;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.title {
+	font-size: 36px;
+	line-height: 48px;
+	// color: $title-dark;
+	color: #243f4d;
+	@extend %dmsans-700;
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+.filters {
+	text-align: center;
+	margin-bottom: 75px;
+	&__btn {
+		border: none;
+		padding: 0;
+		background-color: transparent;
+		font-size: 16px;
+		line-height: 24px;
+		color: #8b8b8b;
+		@extend %dmsans-700;
+		cursor: pointer;
+		&:hover {
+			color: $title-dark;
+		}
+	}
+	&__btn + .filters__btn {
+		margin-left: 25px;
+	}
+	.mixitup-control-active {
+		color: $title-dark;
+	}
+}
+
+.button {
+	display: block;
+	position: relative;
+	&::after {
+		content: "";
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 22px;
+		height: 9px;
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translateY(-50%);
+	}
+}
+
+.button--light {
+	background-color: transparent;
+	border: 1px solid $default;
+	border-radius: 5px;
+	color: $default;
+	padding: 20px 80px 20px 20px;
+	max-width: 180px;
+	&::after {
+		background-image: url("../images/icons/btn-arrow-blue.svg");
+	}
+}
+
+.top {
+	background-color: #edf1f4;
+	padding: 30px 0;
+	text-align: center;
+	&__title {
+		padding-bottom: 0;
+		@extend %rubik-300;
+		color: #222933;
+	}
+}
+
+.breadcrumbs {
+	display: flex;
+	justify-content: center;
+	&__list {
+		display: flex;
+	}
+	&__item {
+		padding-right: 20px;
+		position: relative;
+		&::after {
+			content: "/";
+			position: absolute;
+			top: 1px;
+			right: 8px;
+			color: #8b8f94;
+		}
+		&:last-child {
+			padding: 0;
+			&::after {
+				display: none;
+			}
+		}
+	}
+	&__link {
+		font-size: 14px;
+		line-height: 24px;
+		color: #8b8f94;
+		@extend %rubik-400;
+	}
+}
+
+@media (max-width: 1250px) {
+	.filters {
+		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 590px) {
+	.title {
+		font-size: 32px;
+		line-height: 40px;
+		padding-bottom: 15px;
+	}
+	.top {
+		padding: 20px 0;
+	}
+	.title.top__title {
+		padding-bottom: 0;
+	}
+}
+
+@media (max-width: 470px) {
+	.filters {
+		margin-bottom: 25px;
+	}
+	.filters__btn + .filters__btn {
+		margin-left: 15px;
+	}
+}

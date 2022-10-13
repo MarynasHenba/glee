@@ -1,0 +1,63 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
+@import "style";
+@import "../module/_header/_header";
+@import "../module/_blog/_blog";
+@import "../module/_footer/_footer";
+
+.terms {
+	padding: 115px 0;
+	&__title {
+		font-size: 24px;
+		line-height: 40px;
+		color: $title;
+		@extend %rubik-500;
+		margin-bottom: 27px;
+	}
+	&__types,
+	&__colecting {
+		margin-bottom: 70px;
+	}
+	&__types {
+		&-list {
+			list-style: decimal-leading-zero;
+			.terms__text {
+				margin-left: 30px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 30px;
+		color: $title;
+		@extend %rubik-400;
+	}
+}
+
+@media (max-width: 980px) {
+  .terms {
+    padding: 60px 0;
+    &__types,
+    &__colecting {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .terms {
+    padding: 35px 0;
+    &__types,
+    &__colecting {
+      margin-bottom: 35px;
+    }
+    &__title,
+    &__text {
+      margin-bottom: 20px;
+    }
+  }
+}

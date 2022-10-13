@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Glee</title>
+		<link rel="stylesheet" href="css/contacts.min.css" />
+	</head>
+	<body>
+
+		{% include 'app/module/_header/_header.html' %}
+
+		<main class="main">
+		{% include 'app/module/_top-contacts/_top-contacts.html' %}
+			
+		{% include 'app/module/_contact/_contact.html' %}
+
+			{% include 'app/module/_blog/_blog.html' %}
+		</main>
+
+		{% include 'app/module/_footer/_footer.html' %}
+
+		<script
+			async
+			src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"
+		></script>
+		<script>
+			let map;
+
+			function initMap() {
+				map = new google.maps.Map(document.getElementById("map"), {
+					center: { lat: 29.78160836222215, lng: -95.39013773107195 },
+					zoom: 9,
+					styles: [
+    {
+        "featureType": "landscape.natural",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "saturation": "-100"
+            },
+            {
+                "lightness": "0"
+            },
+            {
+                "gamma": "1"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural.landcover",
+        "elementType": "all",
+        "stylers": [
+            {
+                "saturation": "0"
+            },
+            {
+                "lightness": "0"
+            },
+            {
+                "gamma": "1.00"
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural.landcover",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "saturation": "-0"
+            },
+            {
+                "lightness": "0"
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural.terrain",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "saturation": "0"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "saturation": "-44"
+            },
+            {
+                "lightness": "69"
+            },
+            {
+                "color": "#d8f3db"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "saturation": "-100"
+            },
+            {
+                "lightness": "44"
+            },
+            {
+                "gamma": "1.00"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "saturation": "0"
+            },
+            {
+                "lightness": "0"
+            },
+            {
+                "gamma": "1.00"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "saturation": "-45"
+            }
+        ]
+    }
+]
+				});
+			}
+		</script>
+		<script src="js/main.min.js"></script>
+	</body>
+</html>

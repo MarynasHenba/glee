@@ -1,0 +1,167 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
+@import "style";
+@import "../module/_header/_header";
+@import "../module/_blog/_blog";
+@import "../module/_footer/_footer";
+
+@media (max-width: 1260px) {
+	.blog-page {
+		&__content {
+			margin-right: 30px;
+		}
+		.filter {
+			margin-right: 0;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.blog-page {
+		&__content {
+			width: 750px;
+			margin-right: 20px;
+		}
+		&__img {
+			max-width: 750px;
+		}
+	}
+}
+
+@media (max-width: 1150px) {
+	.blog-page {
+		&__inner {
+			padding: 60px 0;
+			justify-content: space-around;
+		}
+		&__content {
+			width: 500px;
+			margin-right: 20px;
+		}
+		&__img {
+			max-width: 500px;
+		}
+	}
+}
+
+@media (max-width: 820px) {
+	.blog-page {
+		&__inner {
+			justify-content: space-around;
+		}
+		&__content {
+			width: 400px;
+			margin-right: 20px;
+		}
+		&__item {
+			margin-bottom: 40px;
+		}
+		&__item-info {
+			padding: 20px 15px;
+		}
+		&__img-box {
+			margin-bottom: 25px;
+		}
+		&__img {
+			max-width: 400px;
+		}
+		&__title {
+			font-size: 24px;
+			line-height: 28px;
+			margin-bottom: 10px;
+		}
+		&__text {
+			margin-bottom: 20px;
+		}
+	}
+	.filter {
+		&__item {
+			margin-bottom: 30px;
+		}
+	}
+	.button--light {
+		padding: 10px 50px 10px 20px;
+		max-width: 150px;
+	}
+}
+
+@media (max-width: 720px) {
+	.blog-page {
+		&__inner {
+			padding: 35px 0;
+			flex-direction: column;
+		}
+		&__content {
+			width: 100%;
+		}
+		&__img {
+			max-width: 100%;
+		}
+		&__aside {
+			order: -1;
+		}
+		&__pagination {
+			padding-top: 10px;
+		}
+		.shop-filters {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.filter {
+			width: 100%;
+			&-resent,
+			&-category {
+				display: none;
+			}
+			&-search {
+				&__form {
+					width: 100%;
+				}
+				&__input {
+					width: 400px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 470px) {
+	.blog-page {
+		&__item-info {
+			padding: 15px 10px;
+		}
+		.filter {
+			&-search {
+				&__input {
+					width: 250px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.blog-page {
+		&__item-info {
+			width: 240px;
+			padding: 12px;
+		}
+		&__item-date,
+		&__item-author {
+			font-size: 10px;
+			line-height: 12px;
+		}
+		.filter {
+			&__title {
+				margin-bottom: 15px;
+			}
+			&-search__input {
+				width: 200px;
+			}
+		}
+	}
+}

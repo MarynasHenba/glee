@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Glee</title>
+		<link rel="stylesheet" href="css/product-list2.min.css" />
+	</head>
+	<body>
+
+		{% include 'app/module/_header/_header.html' %}
+
+		<main class="main">
+			{% include 'app/module/_top-product-list/_top-product-list.html' %}
+
+			<section class="shop">
+				<div class="container--small">
+					<div class="shop__wrapper">
+					<button class="shop__filters-btn">
+						<img class="shop__filters-img" src="images/icons/filter.svg">
+					</button>					
+						{% include 'app/module/_shop-filters/_shop-filters.html' %}
+
+						{% include 'app/module/_product-list2-content/_product-list2-content.html' %}
+					</div>
+				</div>
+			</section>
+			{% include 'app/module/_partners/_partners.html' %}
+		</main>
+
+	{% include 'app/module/_footer/_footer.html' %}
+
+		<script src="js/main.min.js"></script>
+	</body>
+</html>
